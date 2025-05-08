@@ -36,6 +36,18 @@ cmake -DCMAKE_GENERATOR_PLATFORM=x64 -DCMAKE_PREFIX_PATH=C:\Qt\5.15.2\msvc2019_6
 
 cmake --build c:\mega\build-x64 --config Debug --target MEGAsync --target simple_client
 
+cmake -DCMAKE_BUILD_TYPE=Debug -DVCPKG_ROOT=c:\mega\vcpkg -S c:\mega\desktop\src\MEGASync\mega -B c:\mega\build-x64-SDK
+
+cmake --build c:\mega\build-x64-SDK --config Debug --target simple_client
+
+Now we have  
+C:\mega\build-x64-SDK\examples\simple_client\Debug\simple_client.exe 
+C:\mega\build-x64\src\MEGASync\Debug\MEGAsync.exe
+
+for test 1 just run C:\mega\build-x64-SDK\examples\simple_client\Debug\simple_client.exe 
+
+for test 2 just run C:\mega\build-x64\src\MEGASync\Debug\MEGAsync.exe and go to GUI click setting, there should have a combox which can toggle theme between light and dark
+
 
 
 
