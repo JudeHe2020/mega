@@ -47,7 +47,7 @@ C:\mega\build-x64\src\MEGASync\Debug\MEGAsync.exe
 for test 1 just run C:\mega\build-x64-SDK\examples\simple_client\Debug\simple_client.exe 
 
 for test 2 just run C:\mega\build-x64\src\MEGASync\Debug\MEGAsync.exe and go to GUI click setting, there should have a combox which can toggle theme between light and dark
-
+![image](https://github.com/JudeHe2020/mega/blob/main/darkmode.png)
 
 
 
