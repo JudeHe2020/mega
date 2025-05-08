@@ -43,7 +43,7 @@ cmake --build c:\mega\build-x64-SDK --config Debug --target simple_client
 Now we have  
 C:\mega\build-x64-SDK\examples\simple_client\Debug\simple_client.exe 
 C:\mega\build-x64\src\MEGASync\Debug\MEGAsync.exe
-
+# run it
 for test 1 just run C:\mega\build-x64-SDK\examples\simple_client\Debug\simple_client.exe 
 
 for test 2 just run C:\mega\build-x64\src\MEGASync\Debug\MEGAsync.exe and go to GUI click setting, there should have a combox which can toggle theme between light and dark
