@@ -22,3 +22,6 @@
     }
 
 # how to built it 
+git clone https://github.com/JudeHe2020/mega.git to your windows OS, for example C:\mega
+now you have C:\mega\desktop,
+
