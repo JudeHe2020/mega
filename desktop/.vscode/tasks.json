@@ -23,7 +23,7 @@
             "command": "cmake",
             "args": [
                 "-DCMAKE_GENERATOR_PLATFORM=x64",
-                "-DCMAKE_PREFIX_PATH=C:\\Qt\\5.15.16\\x64",
+                "-DCMAKE_PREFIX_PATH=C:\\5.15.2\\msvc2019_64",
                 "-DVCPKG_ROOT=c:\\mega\\vcpkg",
                 "-DENABLE_DESKTOP_APP_TESTS=ON",
                 "-S",

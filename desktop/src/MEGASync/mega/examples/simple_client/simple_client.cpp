@@ -273,7 +273,7 @@ private:
 
         file.close();
 
-        LOG_LOCATION() << "File " << mFileForUpload << " created successfully with 1MB of content."
+        LOG_LOCATION() << "File " << mFileForUpload << " created successfully with 5MB of content."
                        << std::endl;
         return true;
     }
