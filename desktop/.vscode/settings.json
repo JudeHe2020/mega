@@ -1,0 +1,10 @@
+{
+    "clangd.path": "c:\\Users\\HeHaiqing\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\19.1.2\\clangd_19.1.2\\bin\\clangd.exe", // clangd可执行文件路径
+    "clangd.arguments": [
+        "--compile-commands-dir=C:\\mega\\build-x64\\.qtc_clangd",
+        "--background-index",
+        "--header-insertion=iwyu",
+        "--clang-tidy"
+    ],
+    "clangd.checkUpdates": true,
+}

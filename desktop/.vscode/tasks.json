@@ -1,0 +1,59 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Clean MEGAsync",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "if (Test-Path 'c:\\mega\\build-x64') {",
+                "  Get-ChildItem -Path 'c:\\mega\\build-x64' | Where-Object { $_.Name -ne '.qtc_clangd' } | Remove-Item -Recurse -Force;",
+                "}"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "CMake Config MEGAsync",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "-DCMAKE_GENERATOR_PLATFORM=x64",
+                "-DCMAKE_PREFIX_PATH=C:\\Qt\\5.15.16\\x64",
+                "-DVCPKG_ROOT=c:\\mega\\vcpkg",
+                "-DENABLE_DESKTOP_APP_TESTS=ON",
+                "-S",
+                "c:\\mega\\desktop",
+                "-B",
+                "c:\\mega\\build-x64",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build MEGAsync",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "c:\\mega\\build-x64",
+                "--config",
+                "Debug",
+                "--target",
+                "MEGAsync"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "MEGASync Debug",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:\\mega\\build-x64\\src\\MEGASync\\Debug\\MEGASync.exe",
+            "visualizerFile": "C:\\Users\\HeHaiqing\\Documents\\Visual Studio 2022\\Visualizers\\qt5.natvis",
+            "cwd": "${workspaceRoot}",
+        },
+        {
+            "name": "UnitTests Debug",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "C:\\mega\\build-x64\\src\\MEGAAutoTests\\UnitTests\\Debug\\UnitTests.exe",
+            "visualizerFile": "C:\\Users\\HeHaiqing\\Documents\\Visual Studio 2022\\Visualizers\\qt5.natvis",
+            "cwd": "${workspaceRoot}",
+        }
+    ]
+}

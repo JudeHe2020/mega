@@ -1,0 +1,115 @@
+
+set(DESKTOP_APP_CONTROL_HEADERS
+    ${CMAKE_CURRENT_LIST_DIR}/AccountStatusController.h
+    ${CMAKE_CURRENT_LIST_DIR}/AppState.h
+    ${CMAKE_CURRENT_LIST_DIR}/AppStatsEvents.h
+    ${CMAKE_CURRENT_LIST_DIR}/AsyncHandler.h
+    ${CMAKE_CURRENT_LIST_DIR}/ConnectivityChecker.h
+    ${CMAKE_CURRENT_LIST_DIR}/CrashHandler.h
+    ${CMAKE_CURRENT_LIST_DIR}/DialogOpener.h
+    ${CMAKE_CURRENT_LIST_DIR}/DownloadQueueController.h
+    ${CMAKE_CURRENT_LIST_DIR}/EmailRequester.h
+    ${CMAKE_CURRENT_LIST_DIR}/StatsEventHandler.h
+    ${CMAKE_CURRENT_LIST_DIR}/ProxyStatsEventHandler.h
+    ${CMAKE_CURRENT_LIST_DIR}/ExportProcessor.h
+    ${CMAKE_CURRENT_LIST_DIR}/FileFolderAttributes.h
+    ${CMAKE_CURRENT_LIST_DIR}/FatalEventHandler.h
+    ${CMAKE_CURRENT_LIST_DIR}/HTTPServer.h
+    ${CMAKE_CURRENT_LIST_DIR}/ImageDownloader.h
+    ${CMAKE_CURRENT_LIST_DIR}/IntervalExecutioner.h
+    ${CMAKE_CURRENT_LIST_DIR}/LinkProcessor.h
+    ${CMAKE_CURRENT_LIST_DIR}/LinkObject.h
+    ${CMAKE_CURRENT_LIST_DIR}/LoginController.h
+    ${CMAKE_CURRENT_LIST_DIR}/MegaDownloader.h
+    ${CMAKE_CURRENT_LIST_DIR}/MegaSyncLogger.h
+    ${CMAKE_CURRENT_LIST_DIR}/MegaUploader.h
+    ${CMAKE_CURRENT_LIST_DIR}/TextDecorator.h
+    ${CMAKE_CURRENT_LIST_DIR}/ThreadPool.h
+    ${CMAKE_CURRENT_LIST_DIR}/TransferBatch.h
+    ${CMAKE_CURRENT_LIST_DIR}/TransferRemainingTime.h
+    ${CMAKE_CURRENT_LIST_DIR}/UpdateTask.h
+    ${CMAKE_CURRENT_LIST_DIR}/UserAttributesManager.h
+    ${CMAKE_CURRENT_LIST_DIR}/RequestListenerManager.h
+    ${CMAKE_CURRENT_LIST_DIR}/SetManager.h
+    ${CMAKE_CURRENT_LIST_DIR}/SetTypes.h
+    ${CMAKE_CURRENT_LIST_DIR}/Utilities.h
+    ${CMAKE_CURRENT_LIST_DIR}/Version.h
+    ${CMAKE_CURRENT_LIST_DIR}/gzjoin.h
+    ${CMAKE_CURRENT_LIST_DIR}/qrcodegen.h
+    ${CMAKE_CURRENT_LIST_DIR}/MegaApiSynchronizedRequest.h
+    ${CMAKE_CURRENT_LIST_DIR}/MergeMEGAFolders.h
+    ${CMAKE_CURRENT_LIST_DIR}/MEGAPathCreator.h
+    ${CMAKE_CURRENT_LIST_DIR}/MoveToMEGABin.h
+    ${CMAKE_CURRENT_LIST_DIR}/Preferences/EncryptedSettings.h
+    ${CMAKE_CURRENT_LIST_DIR}/Preferences/EphemeralCredentials.h
+    ${CMAKE_CURRENT_LIST_DIR}/Preferences/Preferences.h
+    ${CMAKE_CURRENT_LIST_DIR}/AccountDetailsManager.h
+    ${CMAKE_CURRENT_LIST_DIR}/UserMessageController.h
+    ${CMAKE_CURRENT_LIST_DIR}/UserMessageTypes.h
+    ${CMAKE_CURRENT_LIST_DIR}/DataBaseClasses/DataModel.h
+    ${CMAKE_CURRENT_LIST_DIR}/DataBaseClasses/DataController.h
+    ${CMAKE_CURRENT_LIST_DIR}/ReloadingEventHandler.h
+    ${CMAKE_CURRENT_LIST_DIR}/UsersUpdateListener.h
+)
+
+set(DESKTOP_APP_CONTROL_SOURCES
+    ${CMAKE_CURRENT_LIST_DIR}/AccountStatusController.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/AppState.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/AppStatsEvents.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ConnectivityChecker.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/CrashHandler.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/DialogOpener.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/DownloadQueueController.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/EmailRequester.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ProxyStatsEventHandler.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ExportProcessor.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/FileFolderAttributes.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/FatalEventHandler.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/HTTPServer.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ImageDownloader.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/IntervalExecutioner.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/LinkProcessor.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/LinkObject.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/LoginController.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/MegaDownloader.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/MegaSyncLogger.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/MegaUploader.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/RequestListenerManager.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/SetManager.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/TextDecorator.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/ThreadPool.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/TransferBatch.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/TransferRemainingTime.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/UpdateTask.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/UserAttributesManager.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/Utilities.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/qrcodegen.c
+    ${CMAKE_CURRENT_LIST_DIR}/MergeMEGAFolders.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/MEGAPathCreator.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/MoveToMEGABin.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/Preferences/EncryptedSettings.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/Preferences/EphemeralCredentials.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/Preferences/Preferences.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/StatsEventHandler.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/AccountDetailsManager.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/UserMessageController.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/BugReport/BugReportController.h
+    ${CMAKE_CURRENT_LIST_DIR}/BugReport/BugReportController.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/BugReport/BugReportData.h
+    ${CMAKE_CURRENT_LIST_DIR}/ReloadingEventHandler.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/UsersUpdateListener.cpp
+)
+
+target_sources(${ExecutableTarget}
+    PRIVATE
+    ${DESKTOP_APP_CONTROL_HEADERS}
+    ${DESKTOP_APP_CONTROL_SOURCES}
+)
+
+set (DESKTOP_APP_INCLUDE_DIRECTORIES
+    ${CMAKE_CURRENT_LIST_DIR}
+    ${CMAKE_CURRENT_LIST_DIR}/BugReport
+    ${CMAKE_CURRENT_LIST_DIR}/DataBaseClasses
+    ${CMAKE_CURRENT_LIST_DIR}/Preferences
+)
+target_include_directories(${ExecutableTarget} PRIVATE ${DESKTOP_APP_INCLUDE_DIRECTORIES})
