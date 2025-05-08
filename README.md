@@ -21,7 +21,22 @@
           mUi->gThemeSelector->show();
     }
 
-# how to built it 
-git clone https://github.com/JudeHe2020/mega.git to your windows OS, for example C:\mega
-now you have C:\mega\desktop,
+# built it 
+mkdir c:\mega\
+
+cd c:\mega\
+
+git clone https://github.com/JudeHe2020/mega.git
+
+git clone https://github.com/microsoft/vcpkg 
+
+cd desktop
+
+cmake -DCMAKE_GENERATOR_PLATFORM=x64 -DCMAKE_PREFIX_PATH=C:\Qt\5.15.2\msvc2019_64 -DVCPKG_ROOT=c:\mega\vcpkg -S c:\mega\desktop -B c:\mega\build-x64
+
+cmake --build c:\mega\build-x64 --config Debug --target MEGAsync --target simple_client
+
+
+
+
 
